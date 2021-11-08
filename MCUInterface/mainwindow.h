@@ -15,6 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_sendButton_clicked();
+
+    void on_refreshButon_clicked();
+
+    void on_spinBox_fan1_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

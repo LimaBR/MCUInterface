@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="sendButton">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -39,7 +39,7 @@
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QWidget" name="widget_5" native="true">
-       <widget class="QSpinBox" name="spinBox_4">
+       <widget class="QSpinBox" name="spinBox_fan1">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -75,7 +75,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget_3" native="true">
-       <widget class="QSpinBox" name="spinBox_2">
+       <widget class="QSpinBox" name="spinBox_fan2">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -111,7 +111,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget_4" native="true">
-       <widget class="QSpinBox" name="spinBox_3">
+       <widget class="QSpinBox" name="spinBox_fan3">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -147,7 +147,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget" native="true">
-       <widget class="QSpinBox" name="spinBox">
+       <widget class="QSpinBox" name="spinBox_fan4">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -195,7 +195,7 @@
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QWidget" name="widget_8" native="true">
-       <widget class="QLabel" name="label_11">
+       <widget class="QLabel" name="label_fan1">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -231,7 +231,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget_6" native="true">
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="label_fan2">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -267,7 +267,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget_2" native="true">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="label_fan3">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -303,7 +303,7 @@
      </item>
      <item>
       <widget class="QWidget" name="widget_7" native="true">
-       <widget class="QLabel" name="label_9">
+       <widget class="QLabel" name="label_fan4">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -339,12 +339,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBox_comPort">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>40</y>
-      <width>61</width>
+      <width>81</width>
       <height>22</height>
      </rect>
     </property>
@@ -352,17 +352,17 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>20</y>
-      <width>47</width>
-      <height>13</height>
+      <width>71</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>COM Port</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="refreshButton">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -373,6 +373,16 @@
     </property>
     <property name="text">
      <string>Refresh</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>40</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>
