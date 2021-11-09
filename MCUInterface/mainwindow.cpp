@@ -1,6 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <cstdio>
+#include <QtSerialPort>
+#include <QSerialPortInfo>
+
+QSerialPort serial;
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,7 +27,10 @@ void MainWindow::on_sendButton_clicked()
 
 void MainWindow::on_refreshButon_clicked()
 {
-
+    //Lista as portas disponíveis e seta cada uma como um item do comboBox
+    const auto portsList = QSerialPortInfo::availablePorts();
+    for (const QSerialPortInfo &specificPort : portsList)
+        ui->comboBox_comPort->addItem(specificPort.portName());
 }
 
 
