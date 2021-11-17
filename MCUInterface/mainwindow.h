@@ -20,7 +20,7 @@ private slots:
 
     void on_refreshButton_clicked();
 
-    void on_comboBox_comPort_currentTextChanged(const QString &arg1);
+    void on_comPort_currentTextChanged(const QString &arg1);
 
     void on_openButton_clicked();
 

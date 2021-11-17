@@ -339,7 +339,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QComboBox" name="comboBox_comPort">
+   <widget class="QComboBox" name="comPort">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -410,6 +410,17 @@
     <property name="text">
      <string>Close</string>
     </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>80</y>
+      <width>111</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_output"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

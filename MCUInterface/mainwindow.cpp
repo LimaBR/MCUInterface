@@ -38,10 +38,10 @@ void MainWindow::on_refreshButton_clicked()
     //Lista as portas disponíveis e seta cada uma como um item do comboBox
     const auto portsList = QSerialPortInfo::availablePorts();
     for (const QSerialPortInfo &specificPort : portsList)
-        ui->comboBox_comPort->addItem(specificPort.portName());
+        ui->comPort->addItem(specificPort.portName());
 }
 
-void MainWindow::on_comboBox_comPort_currentTextChanged(const QString &arg1)
+void MainWindow::on_comPort_currentTextChanged(const QString &arg1)
 {
     serialName = arg1;
 }
