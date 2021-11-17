@@ -41,24 +41,15 @@ void MainWindow::on_refreshButton_clicked()
         ui->comboBox_comPort->addItem(specificPort.portName());
 }
 
-
-void MainWindow::on_spinBox_fan1_valueChanged(int arg1)
-{
-    /*char label[64];
-    sprintf_s(label, 64, "%d", arg1);
-    ui->label_fan1->setText(label);*/
-}
-
-
 void MainWindow::on_comboBox_comPort_currentTextChanged(const QString &arg1)
 {
     serialName = arg1;
-    serial.close();
 }
 
 
 void MainWindow::on_openButton_clicked()
 {
+    serial.close();
     serial.setPortName(serialName);
     serial.open(QIODevice::ReadWrite);
     connect(&serial, &QSerialPort::readyRead, this, &MainWindow::serialSlot);
@@ -75,3 +66,9 @@ void MainWindow::serialSlot(){
     ui->label_fan3->setText(fanText[2]);
     ui->label_fan4->setText(fanText[3]);
 }
+
+void MainWindow::on_closeButton_clicked()
+{
+    serial.close();
+}
+

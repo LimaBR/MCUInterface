@@ -20,13 +20,13 @@ private slots:
 
     void on_refreshButton_clicked();
 
-    void on_spinBox_fan1_valueChanged(int arg1);
-
     void on_comboBox_comPort_currentTextChanged(const QString &arg1);
 
     void on_openButton_clicked();
 
     void serialSlot();
+
+    void on_closeButton_clicked();
 
 private:
     Ui::MainWindow *ui;
