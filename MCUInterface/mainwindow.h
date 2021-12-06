@@ -43,8 +43,6 @@ private:
     Ui::MainWindow *ui;
     QSerialPort serial;
     QString serialName;
-    uint32_t fanSpeed[4];
-    char fanText[4][64];
     std::vector<QLabel*> outputName;
     std::vector<QFrame*> outputFrame;
     std::vector<QLabel*> outputContent;

@@ -37,14 +37,6 @@ void MCU::dataAvailable(QSerialPort* _serial){
         w->setupMCUWidget();
         isOpen = 1;
     }else if(recvBuffer[0] == 'W' && isOpen){
-        /*sscanf_s(recvBuffer, "W%08lX-%08lX-%08lX-%08lX-X", &fanSpeed[0], &fanSpeed[1], &fanSpeed[2], &fanSpeed[3]);
-        for (int i=0; i<4; i++){
-                sprintf_s(fanText[i], 64, "%ld", fanSpeed[i]);
-        }
-        ui->label_fan1->setText(fanText[0]);
-        ui->label_fan2->setText(fanText[1]);
-        ui->label_fan3->setText(fanText[2]);
-        ui->label_fan4->setText(fanText[3]);*/
         outputValues.clear();
         for(int i=1; ; i+=9){
             if(recvBuffer[i] == '-'){

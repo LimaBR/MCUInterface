@@ -17,12 +17,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_sendButton_clicked()
 {
-    /*sprintf_s(sendBuffer, 64, "Y%08lX-%08lX-%08lX-%08lX-Z"
-              , ui->spinBox_fan1->value()
-              , ui->spinBox_fan2->value()
-              , ui->spinBox_fan3->value()
-              , ui->spinBox_fan4->value());
-    serial.write(sendBuffer, 64);*/
     std::vector<int> sendVector;
     for(int i=0; i<inputContent.size(); i++){
         sendVector.push_back(inputContent[i]->value());
