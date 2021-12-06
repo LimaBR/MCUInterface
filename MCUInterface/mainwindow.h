@@ -3,6 +3,14 @@
 
 #include <QMainWindow>
 #include <mcu.h>
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <QtSerialPort>
+#include <QSerialPortInfo>
+#include <QSpinBox>
+#include <Qlabel>
+#include <QFrame>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +24,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setupMCUWidget();
+    void setOutputValues(std::vector<int> values);
 
 private slots:
     void on_sendButton_clicked();
@@ -32,5 +41,14 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QSerialPort serial;
+    QString serialName;
+    uint32_t fanSpeed[4];
+    char fanText[4][64];
+    std::vector<QLabel*> outputName;
+    std::vector<QFrame*> outputFrame;
+    std::vector<QLabel*> outputContent;
+    std::vector<QLabel*> inputName;
+    std::vector<QSpinBox*> inputContent;
 };
 #endif // MAINWINDOW_H

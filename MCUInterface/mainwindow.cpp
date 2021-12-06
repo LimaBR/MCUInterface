@@ -1,20 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <cstdio>
-#include <QtSerialPort>
-#include <QSerialPortInfo>
-#include <QSpinBox>
-
-QSerialPort serial;
-QString serialName;
-char sendBuffer[64];
-uint32_t fanSpeed[4];
-char fanText[4][64];
-std::vector<QLabel*> outputName;
-std::vector<QFrame*> outputFrame;
-std::vector<QLabel*> outputContent;
-std::vector<QLabel*> inputName;
-std::vector<QSpinBox*> inputContent;
 
 MCU* mcu0;
 
@@ -38,12 +23,18 @@ void MainWindow::on_sendButton_clicked()
               , ui->spinBox_fan3->value()
               , ui->spinBox_fan4->value());
     serial.write(sendBuffer, 64);*/
+    std::vector<int> sendVector;
+    for(int i=0; i<inputContent.size(); i++){
+        sendVector.push_back(inputContent[i]->value());
+    }
+    mcu0->sendData(sendVector);
 }
 
 void MainWindow::on_refreshButton_clicked()
 {
     //Lista as portas disponíveis e seta cada uma como um item do comboBox
     const auto portsList = QSerialPortInfo::availablePorts();
+    ui->comPort->clear();
     for (const QSerialPortInfo &specificPort : portsList)
         ui->comPort->addItem(specificPort.portName());
 }
@@ -60,7 +51,7 @@ void MainWindow::on_openButton_clicked()
     serial.close();
     serial.setPortName(serialName);
     serial.setBaudRate(1000000); //Baud rate 1Mbps
-    serial.open(QIODevice::ReadWrite);
+    bool ok = serial.open(QIODevice::ReadWrite);
     //TODO: Verificar se a porta realmente foi aberta
     mcu0 = new MCU(&serial);
     connect(&serial, &QSerialPort::readyRead, this, &MainWindow::serialSlot);
@@ -126,6 +117,12 @@ void MainWindow::setupMCUWidget(){
         //TODO: Tamanho dos widgets
         ui->verticalLayout_input->addWidget(inputName.back());
         ui->verticalLayout_input->addWidget(inputContent.back());
+    }
+}
+
+void MainWindow::setOutputValues(std::vector<int> values){
+    for(int i=0; i<values.size(); i++){
+        outputContent[i]->setText(QString::number(values[i]));
     }
 }
 
