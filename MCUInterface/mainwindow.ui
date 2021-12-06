@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>290</y>
+      <y>530</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -32,312 +32,11 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>81</width>
-      <height>191</height>
+      <width>71</width>
+      <height>451</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QWidget" name="widget_5" native="true">
-       <widget class="QSpinBox" name="spinBox_fan1">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>55</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="minimum">
-         <number>-32768</number>
-        </property>
-        <property name="maximum">
-         <number>32767</number>
-        </property>
-        <property name="displayIntegerBase">
-         <number>10</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_6">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 1</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_3" native="true">
-       <widget class="QSpinBox" name="spinBox_fan2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>55</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="minimum">
-         <number>-32768</number>
-        </property>
-        <property name="maximum">
-         <number>32767</number>
-        </property>
-        <property name="displayIntegerBase">
-         <number>10</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 2</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_4" native="true">
-       <widget class="QSpinBox" name="spinBox_fan3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>55</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="minimum">
-         <number>-32768</number>
-        </property>
-        <property name="maximum">
-         <number>32767</number>
-        </property>
-        <property name="displayIntegerBase">
-         <number>10</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 3</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget" native="true">
-       <widget class="QSpinBox" name="spinBox_fan4">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>55</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="minimum">
-         <number>-32768</number>
-        </property>
-        <property name="maximum">
-         <number>32767</number>
-        </property>
-        <property name="displayIntegerBase">
-         <number>10</number>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 4</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>80</y>
-      <width>81</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QWidget" name="widget_8" native="true">
-       <widget class="QLabel" name="label_fan1">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_12">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 1</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_6" native="true">
-       <widget class="QLabel" name="label_fan2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 2</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_2" native="true">
-       <widget class="QLabel" name="label_fan3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 3</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-     <item>
-      <widget class="QWidget" name="widget_7" native="true">
-       <widget class="QLabel" name="label_fan4">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Sunken</enum>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_10">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>47</width>
-          <height>13</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>FAN 4</string>
-        </property>
-       </widget>
-      </widget>
-     </item>
-    </layout>
+    <layout class="QVBoxLayout" name="verticalLayout_input"/>
    </widget>
    <widget class="QComboBox" name="comPort">
     <property name="geometry">
@@ -414,10 +113,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>110</x>
       <y>80</y>
-      <width>111</width>
-      <height>191</height>
+      <width>71</width>
+      <height>451</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_output"/>
@@ -429,7 +128,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

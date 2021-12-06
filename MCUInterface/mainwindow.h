@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <mcu.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +15,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void setupMCUWidget();
 
 private slots:
     void on_sendButton_clicked();
@@ -24,9 +26,9 @@ private slots:
 
     void on_openButton_clicked();
 
-    void serialSlot();
-
     void on_closeButton_clicked();
+
+    void serialSlot();
 
 private:
     Ui::MainWindow *ui;
