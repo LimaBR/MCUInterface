@@ -1,0 +1,30 @@
+\hypertarget{mcu_8h_source}{}\doxysection{mcu.\+h}
+\label{mcu_8h_source}\index{C:/Users/Gabriel/Documents/MCUInterface/MCUInterface/mcu.h@{C:/Users/Gabriel/Documents/MCUInterface/MCUInterface/mcu.h}}
+\mbox{\hyperlink{mcu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MCU\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MCU\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QtSerialPort>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QSerialPortInfo>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_m_c_u}{MCU}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_m_c_u_ab263afcce9250464d1dc3d83bb1b503c}{MCU}}(QSerialPort* \_serial);}
+\DoxyCodeLine{10     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_m_c_u_a95bbb132f068a71ce981355051a1b7d7}{\string~MCU}}();}
+\DoxyCodeLine{11     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_c_u_a46eade89ae91ef5e6d1cf316111d619e}{dataAvailable}}(QSerialPort* \_serial);}
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_c_u_ad305a7a03bfc9d1f6b9811a60f7c3214}{askForTypes}}();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_m_c_u_add660f75ca4af95cea00a478f901bb23}{sendData}}(std::vector<int> data);}
+\DoxyCodeLine{18     std::vector<int> \mbox{\hyperlink{class_m_c_u_a84e88b7c2bfde7e94178e7aea36f75ad}{typesOut}};}
+\DoxyCodeLine{23     std::vector<int> \mbox{\hyperlink{class_m_c_u_a7cdce9dad4b2906a7024842e6dc13986}{typesIn}};}
+\DoxyCodeLine{24 \textcolor{keyword}{private}:}
+\DoxyCodeLine{25     QSerialPort* serial;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{char} recvBuffer[1024];}
+\DoxyCodeLine{27     \textcolor{keywordtype}{char} sendBuffer[1024];}
+\DoxyCodeLine{28     std::vector<int> outputValues;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} isOpen = 0;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// MCU\_H}}
+
+\end{DoxyCode}

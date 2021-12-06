@@ -1,0 +1,58 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+\label{mainwindow_8h_source}\index{C:/Users/Gabriel/Documents/MCUInterface/MCUInterface/mainwindow.h@{C:/Users/Gabriel/Documents/MCUInterface/MCUInterface/mainwindow.h}}
+\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{mcu_8h}{mcu.h}}>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QtSerialPort>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QSerialPortInfo>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QSpinBox>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <Qlabel>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <QFrame>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}}; \}}
+\DoxyCodeLine{17 QT\_END\_NAMESPACE}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     Q\_OBJECT}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_af20665018c40632a433849b926b0c1a6}{setupMCUWidget}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_a4580736bbbc2b02d8beb2444b9ed37b5}{setOutputValues}}(std::vector<int> values);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} on\_sendButton\_clicked();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} on\_refreshButton\_clicked();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} on\_comPort\_currentTextChanged(\textcolor{keyword}{const} QString \&arg1);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} on\_openButton\_clicked();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} on\_closeButton\_clicked();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} serialSlot();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}} *ui;}
+\DoxyCodeLine{44     QSerialPort serial;}
+\DoxyCodeLine{45     QString serialName;}
+\DoxyCodeLine{46     std::vector<QLabel*> outputName;}
+\DoxyCodeLine{47     std::vector<QFrame*> outputFrame;}
+\DoxyCodeLine{48     std::vector<QLabel*> outputContent;}
+\DoxyCodeLine{49     std::vector<QLabel*> inputName;}
+\DoxyCodeLine{50     std::vector<QSpinBox*> inputContent;}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}

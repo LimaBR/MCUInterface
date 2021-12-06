@@ -3,6 +3,12 @@
 
 MCU* mcu0;
 
+/**
+ * @brief MainWindow::MainWindow
+ * @details Class constructor.
+ * @param parent Parent class
+ */
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -10,10 +16,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 
+/**
+ * @brief MainWindow::~MainWindow
+ * @details Class destructor.
+ */
+
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+/**
+ * @brief MainWindow::on_sendButton_clicked
+ * @details Callback for Send button clicked. formats data to send into a vector and calls sendData.
+ */
 
 void MainWindow::on_sendButton_clicked()
 {
@@ -24,6 +40,11 @@ void MainWindow::on_sendButton_clicked()
     mcu0->sendData(sendVector);
 }
 
+/**
+ * @brief MainWindow::on_refreshButton_clicked
+ * @details Callback for Refresh button clicked. Refreshes the lists of available serial ports and populates the combo box.
+ */
+
 void MainWindow::on_refreshButton_clicked()
 {
     //Lista as portas disponíveis e seta cada uma como um item do comboBox
@@ -33,11 +54,21 @@ void MainWindow::on_refreshButton_clicked()
         ui->comPort->addItem(specificPort.portName());
 }
 
+/**
+ * @brief MainWindow::on_comPort_currentTextChanged
+ * @details Callback for comPort combo box value changed. Updates the serialName attribute with the new port.
+ * @param arg1 The name of the serial port selected
+ */
+
 void MainWindow::on_comPort_currentTextChanged(const QString &arg1)
 {
     serialName = arg1;
 }
 
+/**
+ * @brief MainWindow::on_openButton_clicked
+ * @details Callback for Open button clicked. Opens the serial port, allocates MCU object and ask MCU for data types.
+ */
 
 void MainWindow::on_openButton_clicked()
 {
@@ -51,6 +82,11 @@ void MainWindow::on_openButton_clicked()
     connect(&serial, &QSerialPort::readyRead, this, &MainWindow::serialSlot);
     mcu0->askForTypes();
 }
+
+/**
+ * @brief MainWindow::on_closeButton_clicked
+ * @details Callback for Close port button clicked. Closes the serial port, cleans the GUI and frees allocated memory.
+ */
 
 void MainWindow::on_closeButton_clicked()
 {
@@ -87,6 +123,11 @@ void MainWindow::on_closeButton_clicked()
     }
 }
 
+/**
+ * @brief MainWindow::setupMCUWidget
+ * @details Setup the GUI with the spinboxes and labels for the inputs and outputs.
+ */
+
 void MainWindow::setupMCUWidget(){
     //Codigo para setup da interface
     for(int type : mcu0->typesOut){
@@ -114,11 +155,22 @@ void MainWindow::setupMCUWidget(){
     }
 }
 
+/**
+ * @brief MainWindow::setOutputValues
+ * @details Updates the GUI with the values output from the MCU
+ * @param values Values output from the MCU to be updated on the GUI
+ */
+
 void MainWindow::setOutputValues(std::vector<int> values){
     for(int i=0; i<values.size(); i++){
         outputContent[i]->setText(QString::number(values[i]));
     }
 }
+
+/**
+ * @brief MainWindow::serialSlot
+ * @details Callback when data is available on the serial port.
+ */
 
 void MainWindow::serialSlot(){
     mcu0->dataAvailable(&serial);

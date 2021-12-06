@@ -1,0 +1,126 @@
+\hypertarget{class_m_c_u}{}\doxysection{MCU Class Reference}
+\label{class_m_c_u}\index{MCU@{MCU}}
+
+
+{\ttfamily \#include $<$mcu.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_c_u_ab263afcce9250464d1dc3d83bb1b503c}{MCU}} (QSerial\+Port $\ast$\+\_\+serial)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_m_c_u_ab263afcce9250464d1dc3d83bb1b503c}{MCU\+::\+MCU}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_m_c_u_a95bbb132f068a71ce981355051a1b7d7}{$\sim$\+MCU}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_m_c_u_a95bbb132f068a71ce981355051a1b7d7}{MCU\+::$\sim$\+MCU}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_m_c_u_a46eade89ae91ef5e6d1cf316111d619e}{data\+Available}} (QSerial\+Port $\ast$\+\_\+serial)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_m_c_u_a46eade89ae91ef5e6d1cf316111d619e}{MCU\+::data\+Available}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_m_c_u_ad305a7a03bfc9d1f6b9811a60f7c3214}{ask\+For\+Types}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_m_c_u_ad305a7a03bfc9d1f6b9811a60f7c3214}{MCU\+::ask\+For\+Types}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_m_c_u_add660f75ca4af95cea00a478f901bb23}{send\+Data}} (std\+::vector$<$ int $>$ data)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_m_c_u_add660f75ca4af95cea00a478f901bb23}{MCU\+::send\+Data}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_m_c_u_a84e88b7c2bfde7e94178e7aea36f75ad}{types\+Out}}
+\begin{DoxyCompactList}\small\item\em types\+Out \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_m_c_u_a7cdce9dad4b2906a7024842e6dc13986}{types\+In}}
+\begin{DoxyCompactList}\small\item\em types\+In \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_m_c_u_ab263afcce9250464d1dc3d83bb1b503c}\label{class_m_c_u_ab263afcce9250464d1dc3d83bb1b503c}} 
+\index{MCU@{MCU}!MCU@{MCU}}
+\index{MCU@{MCU}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{MCU()}{MCU()}}
+{\footnotesize\ttfamily MCU\+::\+MCU (\begin{DoxyParamCaption}\item[{QSerial\+Port $\ast$}]{\+\_\+serial }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_m_c_u_ab263afcce9250464d1dc3d83bb1b503c}{MCU\+::\+MCU}}. 
+
+Class constructor 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+serial} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_m_c_u_a95bbb132f068a71ce981355051a1b7d7}\label{class_m_c_u_a95bbb132f068a71ce981355051a1b7d7}} 
+\index{MCU@{MCU}!````~MCU@{$\sim$MCU}}
+\index{````~MCU@{$\sim$MCU}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{$\sim$MCU()}{~MCU()}}
+{\footnotesize\ttfamily MCU\+::$\sim$\+MCU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_m_c_u_a95bbb132f068a71ce981355051a1b7d7}{MCU\+::$\sim$\+MCU}}. 
+
+Class destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_m_c_u_ad305a7a03bfc9d1f6b9811a60f7c3214}\label{class_m_c_u_ad305a7a03bfc9d1f6b9811a60f7c3214}} 
+\index{MCU@{MCU}!askForTypes@{askForTypes}}
+\index{askForTypes@{askForTypes}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{askForTypes()}{askForTypes()}}
+{\footnotesize\ttfamily void MCU\+::ask\+For\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_m_c_u_ad305a7a03bfc9d1f6b9811a60f7c3214}{MCU\+::ask\+For\+Types}}. 
+
+Ask the \mbox{\hyperlink{class_m_c_u}{MCU}} for input and output names and types. \mbox{\Hypertarget{class_m_c_u_a46eade89ae91ef5e6d1cf316111d619e}\label{class_m_c_u_a46eade89ae91ef5e6d1cf316111d619e}} 
+\index{MCU@{MCU}!dataAvailable@{dataAvailable}}
+\index{dataAvailable@{dataAvailable}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{dataAvailable()}{dataAvailable()}}
+{\footnotesize\ttfamily void MCU\+::data\+Available (\begin{DoxyParamCaption}\item[{QSerial\+Port $\ast$}]{\+\_\+serial }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_m_c_u_a46eade89ae91ef5e6d1cf316111d619e}{MCU\+::data\+Available}}. 
+
+Function to be called when data is available at the serial port. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+serial} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_m_c_u_add660f75ca4af95cea00a478f901bb23}\label{class_m_c_u_add660f75ca4af95cea00a478f901bb23}} 
+\index{MCU@{MCU}!sendData@{sendData}}
+\index{sendData@{sendData}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{sendData()}{sendData()}}
+{\footnotesize\ttfamily void MCU\+::send\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{data }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_m_c_u_add660f75ca4af95cea00a478f901bb23}{MCU\+::send\+Data}}. 
+
+This function sends the data from a vector formatted to a buffer of uint8\+\_\+t through the serial port. 
+\begin{DoxyParams}{Parameters}
+{\em data} & vector of data to send to the \mbox{\hyperlink{class_m_c_u}{MCU}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_m_c_u_a7cdce9dad4b2906a7024842e6dc13986}\label{class_m_c_u_a7cdce9dad4b2906a7024842e6dc13986}} 
+\index{MCU@{MCU}!typesIn@{typesIn}}
+\index{typesIn@{typesIn}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{typesIn}{typesIn}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ MCU\+::types\+In}
+
+
+
+types\+In 
+
+Vector of the data types for inputs. \mbox{\Hypertarget{class_m_c_u_a84e88b7c2bfde7e94178e7aea36f75ad}\label{class_m_c_u_a84e88b7c2bfde7e94178e7aea36f75ad}} 
+\index{MCU@{MCU}!typesOut@{typesOut}}
+\index{typesOut@{typesOut}!MCU@{MCU}}
+\doxysubsubsection{\texorpdfstring{typesOut}{typesOut}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ MCU\+::types\+Out}
+
+
+
+types\+Out 
+
+Vector of the data types for outputs. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gabriel/\+Documents/\+MCUInterface/\+MCUInterface/\mbox{\hyperlink{mcu_8h}{mcu.\+h}}\item 
+C\+:/\+Users/\+Gabriel/\+Documents/\+MCUInterface/\+MCUInterface/\mbox{\hyperlink{mcu_8cpp}{mcu.\+cpp}}\end{DoxyCompactItemize}

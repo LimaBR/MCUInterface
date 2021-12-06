@@ -11,7 +11,15 @@ public:
     void dataAvailable(QSerialPort* _serial);
     void askForTypes();
     void sendData(std::vector<int> data);
+    /**
+     * @brief typesOut
+     * @details Vector of the data types for outputs.
+     */
     std::vector<int> typesOut;
+    /**
+     * @brief typesIn
+     * @details Vector of the data types for inputs.
+     */
     std::vector<int> typesIn;
 private:
     QSerialPort* serial;
