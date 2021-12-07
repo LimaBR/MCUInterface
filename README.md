@@ -19,7 +19,7 @@ Download the installer of one of the releases, install to any folder on the hard
 
 - Clone the repository
 - Download the QT online installer from https://www.qt.io/download-qt-installer
-- Install QT libraries including QT Creator 6.0.0 IDE
+- Install QT libraries including QT Creator 6.0.0 IDE, MinGW, QT Serial port and QT Serial bus
 - Use the IDE to open the project file MCUInterface.pro
 - Build the project for Debug or Release
 Use the QT Creator 6.0.0 IDE to 
