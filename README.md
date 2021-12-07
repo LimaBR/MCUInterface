@@ -10,3 +10,16 @@ The Arduino IDE already has a built in "Serial Monitor", but it can only input a
 ## Description
 
 The functionality is similar to the front panel of a LabVIEW VI, with controls, indicators, charts and graphs used to create a graphical interface for the program that is running on the microcontroller. Data is sent and received from the microcontroller using a Serial Port protocol, usually through a USB attached virtual COM port.
+
+## Installation instructions
+
+Download the installer of one of the releases, install to any folder on the hard drive and use the shortcut on the desktop to launch
+
+## Compilation instructions
+
+- Clone the repository
+- Download the QT online installer from https://www.qt.io/download-qt-installer
+- Install QT libraries including QT Creator 6.0.0 IDE
+- Use the IDE to open the project file MCUInterface.pro
+- Build the project for Debug or Release
+Use the QT Creator 6.0.0 IDE to 
